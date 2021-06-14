@@ -10,6 +10,11 @@ import UIKit
 struct User {
     var image: String
     var name: String
+    var friends: [UserAlbum] = [UserAlbum(photo: "airpodspro"),
+                                UserAlbum(photo: "airpodspro"),
+                                UserAlbum(photo: "airpodspro"),
+                                UserAlbum(photo: "airpodspro")
+    ]
 }
 
 struct UsersDataStorage {

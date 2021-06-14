@@ -18,15 +18,15 @@ final class MyFriendsViewController: UIViewController {
         }
 
     
-    /*override func prepare(for segue: UIStoryboardSegue, sender: Any?){
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?){
         if segue.identifier == "showUserImage",
            let destinationController = segue.destination as? FriendsCollection,
            let indexSelectedCell = tableView.indexPathForSelectedRow{
-            _ = users[indexSelectedCell.row]
-            destinationController.friends = users
+            let user = users[indexSelectedCell.row]
+            destinationController.friends = user.friends
             
         }
-    }*/
+    }
 }
 
 extension MyFriendsViewController: UITableViewDelegate, UITableViewDataSource {

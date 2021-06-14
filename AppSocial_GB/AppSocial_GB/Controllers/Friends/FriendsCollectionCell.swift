@@ -10,9 +10,9 @@ import UIKit
 final class FriendsCollectionCell: UICollectionViewCell {
     static let identifier = "FriendsCollectionCell"
     
-    @IBOutlet weak var collectionImage: UIImageView!
+    @IBOutlet private weak var collectionImageView: UIImageView!
     
-    func configure(_ user: User){
-        collectionImage.image = UIImage(systemName: user.image)
+    func configure(_ photo: UserAlbum){
+        collectionImageView.image = UIImage(systemName: photo.photo)
     }
 }

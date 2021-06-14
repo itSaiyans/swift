@@ -10,7 +10,7 @@ import UIKit
 class FriendsCollection: UIViewController {
     
     @IBOutlet weak var collectionView: UICollectionView!
-    var friends: [User] = []
+    var friends: [UserAlbum] = []
 }
 
 extension FriendsCollection: UICollectionViewDelegate, UICollectionViewDataSource{
