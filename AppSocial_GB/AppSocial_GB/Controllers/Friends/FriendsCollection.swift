@@ -13,7 +13,8 @@ class FriendsCollection: UIViewController {
     var friends: [UserAlbum] = []
 }
 
-extension FriendsCollection: UICollectionViewDelegate, UICollectionViewDataSource{
+extension FriendsCollection: UICollectionViewDelegate, UICollectionViewDataSource {
+    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         friends.count
     }
@@ -25,4 +26,6 @@ extension FriendsCollection: UICollectionViewDelegate, UICollectionViewDataSourc
         
         return cell
     }
+    
+    
 }

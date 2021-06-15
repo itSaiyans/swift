@@ -9,7 +9,7 @@ import UIKit
 
 @IBDesignable class MyFriendsMainImage: UIView {
     
-    @IBInspectable var radius: CGFloat = 30 {
+    @IBInspectable var radius: CGFloat = 1 {
         didSet {
             setNeedsDisplay()
         }
@@ -21,7 +21,7 @@ import UIKit
     
     required init?(coder: NSCoder) {
         super.init(coder: coder)
-        layer.cornerRadius = 30
+        layer.cornerRadius = 40
         layer.shadowColor = UIColor.black.cgColor
         layer.shadowOpacity = 0.5
         layer.shadowRadius = 7

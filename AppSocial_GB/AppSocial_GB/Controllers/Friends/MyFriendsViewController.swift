@@ -17,14 +17,12 @@ final class MyFriendsViewController: UIViewController {
         return cell
         }
 
-    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?){
         if segue.identifier == "showUserImage",
            let destinationController = segue.destination as? FriendsCollection,
            let indexSelectedCell = tableView.indexPathForSelectedRow{
             let user = users[indexSelectedCell.row]
             destinationController.friends = user.friends
-            
         }
     }
 }
