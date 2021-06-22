@@ -8,6 +8,7 @@
 import UIKit
 
 struct User {
+    var id: Int
     var image: String
     var name: String
     var friends: [UserAlbum] = [UserAlbum(photo: "airpodspro"),
@@ -24,14 +25,14 @@ struct UsersDataStorage {
     
     private init() {
         users = [
-            User(image: "heart", name: "Viktoria"),
-            User(image: "person", name: "Stanislav"),
-            User(image: "person.crop.circle.badge.checkmark", name: "Daniil"),
-            User(image: "eyes", name: "Leonid"),
-            User(image: "mustache.fill", name: "Artem"),
-            User(image: "figure.walk", name: "Elena"),
-            User(image: "face.smiling", name: "Ivan"),
-            User(image: "person.icloud", name: "Maksim")
+            User(id: 1, image: "heart", name: "Viktoria"),
+            User(id: 2, image: "person", name: "Stanislav"),
+            User(id: 3, image: "person.crop.circle.badge.checkmark", name: "Daniil"),
+            User(id: 4, image: "eyes", name: "Leonid"),
+            User(id: 5, image: "mustache.fill", name: "Artem"),
+            User(id: 6, image: "figure.walk", name: "Elena"),
+            User(id: 7, image: "face.smiling", name: "Ivan"),
+            User(id: 8, image: "person.icloud", name: "Maksim")
         ]
     }
 }

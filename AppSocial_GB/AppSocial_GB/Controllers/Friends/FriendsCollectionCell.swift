@@ -16,14 +16,4 @@ final class FriendsCollectionCell: UICollectionViewCell {
     func configure(_ photo: UserAlbum){
         collectionImageView.image = UIImage(systemName: photo.photo)
     }
-    
-    @IBAction func likeButtonTouch(_ sender: UIButton) {
-        if likeButton.tag == 0 {
-            likeButton.setImage(UIImage(systemName: "heart"), for: .normal)
-            likeButton.tag = 1
-        } else {
-            likeButton.setImage(UIImage(systemName: "heart.fill"), for: .normal)
-            likeButton.tag = 0
-        }
-    }
 }
