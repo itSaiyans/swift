@@ -48,6 +48,17 @@ class LikeButton: UIButton {
         
         self.liked.toggle()
         self.counter += self.liked ? 1 : -1
+        
+        LikeButton.animate(withDuration: 0.6,
+                           animations: {
+                            self.transform = CGAffineTransform(scaleX: 0.6, y: 0.6)
+                           },
+                           completion: { _ in
+                            UIView.animate(withDuration: 0.6) {
+                                self.transform = CGAffineTransform.identity
+                            }
+                           })
+        
     }
     
 }

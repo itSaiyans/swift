@@ -174,7 +174,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YMo-VH-fMa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="382.60869565217394" y="-145.3125"/>
+            <point key="canvasLocation" x="-128" y="-145"/>
         </scene>
         <!--My Groups Controller-->
         <scene sceneID="M9Z-SI-98y">
@@ -400,7 +400,7 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <outlet property="avatarImageView" destination="OH2-l7-pbI" id="rZe-5J-AKg"/>
+                                            <outlet property="avatarImageView" destination="OH2-l7-pbI" id="l02-A6-JxO"/>
                                             <outlet property="infoButton" destination="9Cq-Cz-Bay" id="yyU-SX-IrX"/>
                                             <outlet property="nameLabel" destination="hCD-WV-FlC" id="8p2-m3-Iu9"/>
                                             <segue destination="3kO-x2-21W" kind="show" identifier="showUserImage" id="fXX-wc-WEO"/>
@@ -546,7 +546,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9W0-Hs-mhk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-528.98550724637687" y="-145.3125"/>
+            <point key="canvasLocation" x="-991" y="-145"/>
         </scene>
         <!--Friends-->
         <scene sceneID="7gC-t4-kQE">
@@ -625,28 +625,28 @@
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="text" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r9w-mW-zIo">
-                                            <rect key="frame" x="8" y="89" width="29" height="0.0"/>
+                                            <rect key="frame" x="8" y="89" width="29" height="20.5"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Eu-qO-gDz" customClass="ViewingNewsCounter" customModule="AppSocial_GB" customModuleProvider="target">
-                                            <rect key="frame" x="8" y="602" width="56" height="52"/>
+                                            <rect key="frame" x="8" y="419.5" width="56" height="234.5"/>
                                             <state key="normal" title="Counter"/>
                                         </button>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Da-Sn-WuK" customClass="LikeButton" customModule="AppSocial_GB" customModuleProvider="target">
-                                            <rect key="frame" x="364" y="613" width="30" height="30"/>
+                                            <rect key="frame" x="364" y="522" width="30" height="30"/>
                                             <state key="normal" title="Like"/>
                                         </button>
                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ep1-U5-Zel">
-                                            <rect key="frame" x="28" y="99" width="358" height="493"/>
+                                            <rect key="frame" x="28" y="281.5" width="358" height="128"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="128" id="cgn-Bg-nSb"/>
-                                                <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="500" id="tAs-5f-Vgc"/>
+                                                <constraint firstAttribute="height" relation="lessThanOrEqual" constant="500" id="tAs-5f-Vgc"/>
                                             </constraints>
                                         </imageView>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w80-Yk-hbB" customClass="CommentButton" customModule="AppSocial_GB" customModuleProvider="target">
-                                            <rect key="frame" x="98" y="613" width="67" height="30"/>
+                                            <rect key="frame" x="98" y="430.5" width="67" height="212.5"/>
                                             <state key="normal" title="Comment"/>
                                         </button>
                                     </subviews>
