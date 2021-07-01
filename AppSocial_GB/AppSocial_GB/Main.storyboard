@@ -88,7 +88,7 @@
                                                 </userDefinedRuntimeAttributes>
                                                 <connections>
                                                     <action selector="logInButtonPressed:" destination="PiM-oi-Rq9" eventType="touchUpInside" id="Wac-RQ-iQT"/>
-                                                    <segue destination="zSK-a8-gGU" kind="show" identifier="loginSegue" id="xFm-uc-V4T"/>
+                                                    <segue destination="HHm-Gm-JVd" kind="show" id="fpi-Og-zLx"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -175,6 +175,38 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YMo-VH-fMa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-128" y="-145"/>
+        </scene>
+        <!--Loading View-->
+        <scene sceneID="P6b-dv-JEk">
+            <objects>
+                <viewController id="HHm-Gm-JVd" customClass="LoadingView" customModule="AppSocial_GB" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="68r-8I-MqA">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lfW-lB-C2p">
+                                <rect key="frame" x="150" y="408" width="174" height="138"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="sPZ-Ew-IHA"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="lfW-lB-C2p" firstAttribute="leading" secondItem="sPZ-Ew-IHA" secondAttribute="leading" constant="150" id="3e1-Hs-kRB"/>
+                            <constraint firstItem="sPZ-Ew-IHA" firstAttribute="bottom" secondItem="lfW-lB-C2p" secondAttribute="bottom" constant="316" id="d6Z-OO-L6z"/>
+                            <constraint firstItem="lfW-lB-C2p" firstAttribute="top" secondItem="sPZ-Ew-IHA" secondAttribute="top" constant="364" id="m44-xn-1nd"/>
+                            <constraint firstItem="sPZ-Ew-IHA" firstAttribute="trailing" secondItem="lfW-lB-C2p" secondAttribute="trailing" constant="90" id="ox0-vy-1PI"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="ZQx-Ht-Igw"/>
+                    <connections>
+                        <outlet property="loadingPointView" destination="lfW-lB-C2p" id="CJR-oC-sJi"/>
+                        <segue destination="zSK-a8-gGU" kind="show" identifier="goTabbar" id="eTF-1a-P9A"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BuS-qo-g5Z" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="568" y="-145"/>
         </scene>
         <!--My Groups Controller-->
         <scene sceneID="M9Z-SI-98y">
@@ -400,7 +432,7 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <outlet property="avatarImageView" destination="OH2-l7-pbI" id="l02-A6-JxO"/>
+                                            <outlet property="avatarImageView" destination="OH2-l7-pbI" id="mQk-Aq-3zV"/>
                                             <outlet property="infoButton" destination="9Cq-Cz-Bay" id="yyU-SX-IrX"/>
                                             <outlet property="nameLabel" destination="hCD-WV-FlC" id="8p2-m3-Iu9"/>
                                             <segue destination="3kO-x2-21W" kind="show" identifier="showUserImage" id="fXX-wc-WEO"/>
@@ -481,6 +513,7 @@
                                         <connections>
                                             <outlet property="collectionImageView" destination="Hew-Zr-Sts" id="JFs-RS-42X"/>
                                             <outlet property="likeButton" destination="TwC-uB-lLO" id="oZv-SE-71x"/>
+                                            <segue destination="YIS-VM-leS" kind="show" id="qox-2Y-kJD"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
@@ -507,6 +540,37 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QhX-te-Gji" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3708.6956521739135" y="-449.33035714285711"/>
+        </scene>
+        <!--Full Size Photo Controller-->
+        <scene sceneID="X20-ld-VpQ">
+            <objects>
+                <viewController id="YIS-VM-leS" customClass="FullSizePhotoController" customModule="AppSocial_GB" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="h6r-Z1-eAP">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="GkX-h7-iFf">
+                                <rect key="frame" x="8" y="268" width="398" height="365"/>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="aUq-fV-BGr"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="GkX-h7-iFf" firstAttribute="top" secondItem="aUq-fV-BGr" secondAttribute="top" constant="180" id="WtI-RL-PCH"/>
+                            <constraint firstItem="GkX-h7-iFf" firstAttribute="leading" secondItem="aUq-fV-BGr" secondAttribute="leading" constant="8" id="jk2-J4-nIy"/>
+                            <constraint firstItem="aUq-fV-BGr" firstAttribute="bottom" secondItem="GkX-h7-iFf" secondAttribute="bottom" constant="180" id="mQJ-vt-Odb"/>
+                            <constraint firstItem="aUq-fV-BGr" firstAttribute="trailing" secondItem="GkX-h7-iFf" secondAttribute="trailing" constant="8" id="zpu-tc-MCp"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="yhs-D7-roL"/>
+                    <connections>
+                        <outlet property="photoCurrent" destination="GkX-h7-iFf" id="Yd8-vC-xYb"/>
+                        <outlet property="viewPhotoFull" destination="h6r-Z1-eAP" id="P0o-ZN-Hm9"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="X4z-ab-SZi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4494" y="-441"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="97E-ch-mgd">
@@ -551,7 +615,7 @@
         <!--Friends-->
         <scene sceneID="7gC-t4-kQE">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="5lW-vG-3El" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="5lW-vG-3El" customClass="AnimationsTransitioning" customModule="AppSocial_GB" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Friends" image="person.crop.square" catalog="system" selectedImage="person.crop.square.fill" id="BGC-y9-Jqd">
                         <color key="badgeColor" red="0.99111753700000005" green="0.22874215249999999" blue="0.24604886770000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </tabBarItem>
@@ -572,7 +636,7 @@
         <!--Community-->
         <scene sceneID="iBU-Ed-93B">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="pAq-4c-WIj" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="pAq-4c-WIj" customClass="AnimationsTransitioning" customModule="AppSocial_GB" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Community" image="person.3" catalog="system" selectedImage="person.3.fill" id="oej-zk-sIc">
                         <color key="badgeColor" red="0.99111753700000005" green="0.22874215249999999" blue="0.24604886770000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </tabBarItem>
@@ -699,7 +763,7 @@
         <!--News-->
         <scene sceneID="fMj-jn-eKW">
             <objects>
-                <navigationController id="1re-vb-BXl" sceneMemberID="viewController">
+                <navigationController id="1re-vb-BXl" customClass="AnimationsTransitioning" customModule="AppSocial_GB" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="News" image="newspaper" catalog="system" selectedImage="newspaper.fill" id="1we-Ce-Rmk"/>
                     <navigationItem key="navigationItem" id="9np-XG-JB4"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="9Dy-z7-dKq">
@@ -717,7 +781,7 @@
     </scenes>
     <resources>
         <image name="Image" width="1600" height="1600"/>
-        <image name="magnifyingglass" catalog="system" width="128" height="115"/>
+        <image name="magnifyingglass" catalog="system" width="32" height="32"/>
         <image name="newspaper" catalog="system" width="128" height="108"/>
         <image name="newspaper.fill" catalog="system" width="128" height="111"/>
         <image name="person.3" catalog="system" width="128" height="62"/>

@@ -17,3 +17,4 @@ final class FriendsCollectionCell: UICollectionViewCell {
         collectionImageView.image = UIImage(systemName: photo.photo)
     }
 }
+
